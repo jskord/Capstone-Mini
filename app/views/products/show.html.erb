@@ -13,4 +13,9 @@
       
     </div>
   </div>
-  <p>Back to all <a href= '/products'> products</a></p>
+  <p>Back to all products<a href= '/products'> products</a></p>
+  <div>
+    <a href="/products/<%=@product.id%>/edit"> Edit this product </a>
+    <div>
+      <%= link_to "Destroy this product", "/products/#{@product.id}", method: :delete %>
+    </div>
