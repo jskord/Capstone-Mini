@@ -22,7 +22,8 @@ class ProductsController < ApplicationController
       description: params["directions"]
     )
     product.save
-    render 'create.html.erb'
+    flash[:success] = "Product Successfully Added!"
+    redirect_to '/products'
   end
 
   def edit
@@ -39,14 +40,16 @@ class ProductsController < ApplicationController
     product.image = params["image"]
     product.description =  params["description"]
     product.save
-    render 'update.html.erb'
+    flash[:success] = "Product Successfully Updated!"
+    redirect_to '/products'
   end
 
   def destroy
     product_id = params[:id]
     product = Product.find_by(id: product_id)
     product.destroy
-    render 'destroy.html.erb'
+    redirect_to '/products'
+    flash[:success] = "Product Successfully Deleted!"
   end
 
 end
