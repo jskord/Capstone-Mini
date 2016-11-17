@@ -4,8 +4,11 @@
     <img src= '<%= @product.image %>'/>
     <div class="caption">
     <h3><%= @product.name %></h3> 
-    <h3>Price $<%= @product.price %></h3>
     <p><%= @product.description %></p>
+    <p text_color=red> <%= @product.sale_message %> </p>
+    <h3>Price: $<%= @product.price %></h3>
+    <p>Tax: $<%= @product.tax %></p>
+    <p>Total: $<%= @product.total %> </p>
     <p><a href="#" class="btn btn-primary" role="button">Buy</a></p>
     </div>
     
