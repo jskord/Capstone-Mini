@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get '/products' => 'products#index'
   get '/products/new' => 'products#new'
+  get '/products/discount_items' => 'products#discount_items'
   post '/products' => 'products#create'
   get '/products/:id' => 'products#show'
   get '/products/:id/edit' => 'products#edit'
