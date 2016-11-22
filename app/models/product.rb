@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
-
+  belongs_to :supplier
+  has_many :images
+  
   def tax
     price.to_i * 0.15
   end

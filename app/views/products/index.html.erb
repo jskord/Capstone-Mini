@@ -3,7 +3,7 @@
   <div class="col-md-4">
       <div class = "well">
         <h3><a href = '/products/<%= product.id%>'> <%= product.name %></h3></a>
-        <img width="150px" src="<%= product.image %>"/> 
+        <img width="150px" src="<%= product.images.first.url %>"/> 
         <h3>Price $<%= product.price %></h3>
         <p><%= product.description %></p>
       </div>

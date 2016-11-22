@@ -1,7 +1,7 @@
   <div class="row">
     <div class="col-sm-6 col-md-4">
     <div class="thumbnail">  
-    <img src= '<%= @product.image %>'/>
+    <img src= '<%= @product.images.first.url %>'/>
     <div class="caption">
     <h3><%= @product.name %></h3> 
     <p><%= @product.description %></p>
@@ -13,6 +13,7 @@
     <h3>Price: $<%= @product.price %></h3>
     <p>Tax: $<%= @product.tax %></p>
     <p>Total: $<%= @product.total %> </p>
+    <p>Supplier: <%= @product.supplier.name %> </p>
     <p><a href="#" class="btn btn-primary" role="button">Buy</a></p>
     </div>
     
@@ -26,3 +27,6 @@
     <div>
       <%= link_to "Destroy this product", "/products/#{@product.id}", method: :delete %>
     </div>
+    <% @product.images.each do |image| %>
+    <img height= 300px src='<%= image.url %>'/>
+    <% end %>
