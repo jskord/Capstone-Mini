@@ -12,8 +12,13 @@ class ProductsController < ApplicationController
   end
 
   def show
-    product_id = params[:id]
-    @product = Product.find_by(id: product_id)
+    if params[:id] == "random"
+      product = Product.all
+      @product = product.sample
+    else
+      product_id = params[:id]
+      @product = Product.find_by(id: product_id)
+    end
     render 'show.html.erb'
   end
 
