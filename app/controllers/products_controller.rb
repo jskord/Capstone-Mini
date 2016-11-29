@@ -30,10 +30,16 @@ class ProductsController < ApplicationController
     product = Product.new(
       name: params["name"],
       price: params["price"],
-      image: params["image"],
-      description: params["directions"]
+      description: params["description"],
+      supplier_id: rand(1..2)
     )
     product.save
+    image = Image.new(
+      url: params["url"],
+      product_id: product.id
+      )
+    image.save
+    
     flash[:success] = "Product Successfully Added!"
     redirect_to '/products'
   end
