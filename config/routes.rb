@@ -7,5 +7,16 @@ Rails.application.routes.draw do
   patch '/products/:id' => 'products#update'
   delete '/products/:id' => 'products#destroy'
   get '/suppliers' => 'suppliers#index'
+  post '/search' => 'products#search'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  post '/orders' => 'orders#create'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

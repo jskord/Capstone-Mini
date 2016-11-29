@@ -64,4 +64,10 @@ class ProductsController < ApplicationController
     flash[:success] = "Product Successfully Deleted!"
   end
 
+  def search
+    search_term = params[:search]
+    @products = Product.where("name LIKE ?", '%' + search_term + '%')  
+    render 'index.html.erb'
+  end
+
 end

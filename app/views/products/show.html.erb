@@ -14,12 +14,18 @@
     <p>Tax: $<%= @product.tax %></p>
     <p>Total: $<%= @product.total %> </p>
     <p>Supplier: <%= @product.supplier.name %> </p>
-    <p><a href="#" class="btn btn-primary" role="button">Buy</a></p>
-    </div>
-    
-    </div>
-      
-    </div>
+    <%= form_tag '/orders', method: :post do %>
+      <div>
+        <%= label_tag :quantity %>
+        <%= text_field_tag :quantity %>
+      </div>
+      <div>
+        <%= hidden_field_tag :product_id, @product.id %>
+      </div>
+      <%= submit_tag "Purchase" %>
+    <% end %>
+  </div> 
+  </div>
   </div>
   <p>Back to all products<a href= '/products'> products</a></p>
   <div>
