@@ -1,7 +1,8 @@
 <h1>Checkout!</h1>
 <h2>Your cart has:</h2>
 <% @carted_products.each do |carted_product| %>
-  <p> <%= carted_product.product.name %> Quantity: <%= carted_product.quantity %> </p>
+  <p> Name: <%= carted_product.product.name %> </p> 
+  <p> Quantity: <%= carted_product.quantity %> </p>
 <% end %>
 <%= form_tag '/orders', method: :post do %>
       <div>

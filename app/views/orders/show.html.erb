@@ -1,6 +1,8 @@
 <h1>Hey, thanks for your order! </h1>
 <p> you ordered: </p>
-<%= @order.products.each do |product| %>
-  <%= product.name %>
+<% @order.carted_products.each do |carted_product| %>
+  <p> Name: <%= carted_product.product.name %> </p>
+  <p> Quantity: <%= carted_product.quantity %> </p>
   <% end %>
+
 
