@@ -1,2 +1,0 @@
-module CartedProdctsHelper
-end

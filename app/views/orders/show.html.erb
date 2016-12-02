@@ -1,13 +1,6 @@
 <h1>Hey, thanks for your order! </h1>
+<p> you ordered: </p>
+<%= @order.products.each do |product| %>
+  <%= product.name %>
+  <% end %>
 
-<p>Your order ID is: <%= @order.id %> </p>
-
-<p> you ordered  <%= @order.product.name %> </p>
-
-<img src='<%= @order.product.images.first.url %>'/>
-
-<p>Quantity: <%= @order.quantity %></p>
-
-<p>Subtotal: <%= @price %> </p>
-<p>Tax: <%= @tax %> </p>
-<p>Total <%= @total %> </p>

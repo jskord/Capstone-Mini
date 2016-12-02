@@ -17,8 +17,10 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   post '/orders' => 'orders#create'
+  get '/orders' => 'orders#show'
 
-  post '/AddToCart' => 'carted_prodcts#create'
+  post '/AddToCart' => 'carted_products#create'
+  get '/checkout' => 'carted_products#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
