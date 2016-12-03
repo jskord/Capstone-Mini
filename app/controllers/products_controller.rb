@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show, :search]
+
   def index
     only_show_discount = params[:discount]
     if only_show_discount == "true"
@@ -27,6 +29,7 @@ class ProductsController < ApplicationController
 
   def new
     render 'new.html.erb'
+    redirect_to '/products'
   end
 
   def create
@@ -58,9 +61,11 @@ class ProductsController < ApplicationController
     product = Product.find_by(id: product_id)
     product.name = params["name"]
     product.price = params["price"]
-    product.image = params["image"]
     product.description =  params["description"]
     product.save
+    first_image = product.images.first
+    first_image.url = params["image"]
+    first_image.save
     flash[:success] = "Product Successfully Updated!"
     redirect_to '/products'
   end
@@ -78,5 +83,4 @@ class ProductsController < ApplicationController
     @products = Product.where("name LIKE ?", '%' + search_term + '%')  
     render 'index.html.erb'
   end
-
 end

@@ -24,15 +24,18 @@
       </div>
       <%= submit_tag "Add to Cart" %>
     <% end %>
-  </div> 
-  </div>
-  </div>
   <p>Back to all products<a href= '/products'> products</a></p>
   <div>
-    <a href="/products/<%=@product.id%>/edit"> Edit this product </a>
     <div>
-      <%= link_to "Destroy this product", "/products/#{@product.id}", method: :delete %>
+      <% if current_user != nil && current_user.admin %>
+        <a href="/products/<%=@product.id%>/edit"> Edit this product </a>
+        <%= link_to "Destroy this product", "/products/#{@product.id}", method: :delete %>
+      <% end %>
     </div>
+  </div> 
+</div>
+</div>
+  
     <% @product.images.each do |image| %>
     <img height= 300px src='<%= image.url %>'/>
     <% end %>

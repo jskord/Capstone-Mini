@@ -21,6 +21,6 @@ Rails.application.routes.draw do
 
   post '/AddToCart' => 'carted_products#create'
   get '/checkout' => 'carted_products#index'
-
+  delete '/carted_products/:id' => 'carted_products#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
