@@ -29,7 +29,6 @@ class ProductsController < ApplicationController
 
   def new
     render 'new.html.erb'
-    redirect_to '/products'
   end
 
   def create
@@ -75,7 +74,7 @@ class ProductsController < ApplicationController
     product = Product.find_by(id: product_id)
     product.destroy
     redirect_to '/products'
-    flash[:success] = "Product Successfully Deleted!"
+    flash[:warning] = "Product Successfully Deleted!"
   end
 
   def search
