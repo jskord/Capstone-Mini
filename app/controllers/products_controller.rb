@@ -28,25 +28,34 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @product = Product.new
+    @image = Image.new
     render 'new.html.erb'
   end
 
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params["name"],
       price: params["price"],
       description: params["description"],
       supplier_id: rand(1..2)
     )
-    product.save
-    image = Image.new(
-      url: params["url"],
-      product_id: product.id
-      )
-    image.save
+    @image = Image.new(
+        url: params["url"],
+        )
+    if @product.save
+      @image = Image.new(
+        url: params["url"],
+        product_id: @product.id
+        )
+      @image.save
+      flash[:success] = "Product Successfully Added!"
+      redirect_to '/products'
+    else
+      render 'new.html.erb'
+    end
     
-    flash[:success] = "Product Successfully Added!"
-    redirect_to '/products'
+    
   end
 
   def edit
@@ -57,16 +66,20 @@ class ProductsController < ApplicationController
 
   def update
     product_id = params[:id]
-    product = Product.find_by(id: product_id)
-    product.name = params["name"]
-    product.price = params["price"]
-    product.description =  params["description"]
-    product.save
-    first_image = product.images.first
-    first_image.url = params["image"]
-    first_image.save
-    flash[:success] = "Product Successfully Updated!"
-    redirect_to '/products'
+    @product = Product.find_by(id: product_id)
+    @product.name = params["name"]
+    @product.price = params["price"]
+    @product.description =  params["description"]
+    
+    if @product.save
+      first_image = @product.images.first
+      first_image.url = params["image"]
+      first_image.save
+      flash[:success] = "Product Successfully Updated!"
+      redirect_to '/products'
+    else
+      render 'edit.html.erb'
+    end
   end
 
   def destroy
