@@ -6,6 +6,16 @@ class Product < ApplicationRecord
   has_many :carted_products
   has_many :categories, through: :category_products
   has_many :users, through: :carted_products
+
+  validates :name, uniqueness: true
+  validates :name, length: { minimum: 2 }
+  validates :name, length: { maximum: 15 }
+  validates :name, presence: true
+  validates :price, numericality: { greater_than: 0 }
+  validates :price, :numericality => { :only_integer => true }
+  validates :description, presence: true
+  
+
   
   def tax
     price.to_i * 0.15
