@@ -1,16 +1,3 @@
-CartedProduct.create!([
-  {user_id: 5, product_id: 1, quantity: 3, status: "purchased", order_id: 78},
-  {user_id: 5, product_id: 11, quantity: 2, status: "purchased", order_id: 78},
-  {user_id: 5, product_id: 2, quantity: 3, status: "purchased", order_id: 79},
-  {user_id: 5, product_id: 12, quantity: 1, status: "purchased", order_id: 79},
-  {user_id: 5, product_id: 13, quantity: 2, status: "removed", order_id: nil},
-  {user_id: 5, product_id: 1, quantity: 10, status: "purchased", order_id: 81},
-  {user_id: 5, product_id: 15, quantity: 1, status: "purchased", order_id: 81},
-  {user_id: 5, product_id: 2, quantity: 10, status: "purchased", order_id: 81},
-  {user_id: 5, product_id: 1, quantity: 5, status: "purchased", order_id: 82},
-  {user_id: 5, product_id: 12, quantity: 1, status: "purchased", order_id: 83},
-  {user_id: 5, product_id: 1, quantity: 2, status: "purchased", order_id: 83}
-])
 Category.create!([
   {name: "food"},
   {name: "junk food"},
@@ -75,19 +62,19 @@ Order.create!([
   {user_id: 5, subtotal: "270.99", tax: "40.5", total: "310.5"}
 ])
 Product.create!([
-  {name: "xbox", price: "300.99", description: "gaming hype!!", supplier_id: 2},
-  {name: "Starbucks Coffee", price: "7.99", description: "freshly brewed", supplier_id: 2},
-  {name: "Bike", price: "210.99", description: "a really sleek and fast bike, you will love it! They are available in red, green, black, blue, gray, purple, orange, yellow, white, and tie dye", supplier_id: 1},
-  {name: "skyrim", price: "60.0", description: "rpg game", supplier_id: 1},
-  {name: "mug", price: "5.0", description: "for coffee or tea", supplier_id: 1},
-  {name: "oblivion", price: "40.0", description: "elder scrolls game from 2006", supplier_id: 2},
-  {name: "tennis racket", price: "100.0", description: "very accurate, light weight", supplier_id: 1},
-  {name: "lays potato chips", price: "4.99", description: "crunchy", supplier_id: 1},
-  {name: "teddy bear", price: "22.0", description: "cute and cuddly", supplier_id: 2},
-  {name: "o'douls", price: "12.0", description: "non-alcoholic beer", supplier_id: 2},
-  {name: "Big Mac", price: "6.99", description: "very healthy, not", supplier_id: 2},
-  {name: "drone", price: "400.0", description: "spy on your neighbors!", supplier_id: 1},
-  {name: "Bananas", price: "10.0", description: "very ripe and tasty bananas", supplier_id: 1}
+  {name: "xbox", price: "300.99".to_f, description: "gaming hype!!", supplier_id: 2},
+  {name: "Starbucks Coffee", price: "7.99".to_f, description: "freshly brewed", supplier_id: 2},
+  {name: "Bike", price: "210.99".to_f, description: "a really sleek and fast bike, you will love it! They are available in red, green, black, blue, gray, purple, orange, yellow, white, and tie dye", supplier_id: 1},
+  {name: "skyrim", price: "60.0".to_f, description: "rpg game", supplier_id: 1},
+  {name: "mug", price: "5.0".to_f, description: "for coffee or tea", supplier_id: 1},
+  {name: "oblivion", price: "40.0".to_f, description: "elder scrolls game from 2006", supplier_id: 2},
+  {name: "tennis racket", price: "100.0".to_f, description: "very accurate, light weight", supplier_id: 1},
+  {name: "lays potato chips", price: "4.99".to_f, description: "crunchy", supplier_id: 1},
+  {name: "teddy bear", price: "22.0".to_f, description: "cute and cuddly", supplier_id: 2},
+  {name: "o'douls", price: "12.0".to_f, description: "non-alcoholic beer", supplier_id: 2},
+  {name: "Big Mac", price: "6.99".to_f, description: "very healthy, not", supplier_id: 2},
+  {name: "drone", price: "400.0".to_f, description: "spy on your neighbors!", supplier_id: 1},
+  {name: "Bananas", price: "10.0".to_f, description: "very ripe and tasty bananas", supplier_id: 1}
 ])
 Supplier.create!([
   {name: "Target", email: "target@gmail.com", phone: "847-090-2323"},
