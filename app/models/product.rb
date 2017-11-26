@@ -11,8 +11,6 @@ class Product < ApplicationRecord
   validates :name, length: { minimum: 2 }
   validates :name, length: { maximum: 15 }
   validates :name, presence: true
-  validates :price, numericality: { greater_than: 0 }
-  validates :price, :numericality => { :only_integer => true }
   validates :description, presence: true
   
 
