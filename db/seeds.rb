@@ -1,3 +1,4 @@
+Category.delete_all
 Category.create!([
   {name: "food"},
   {name: "junk food"},
@@ -6,28 +7,7 @@ Category.create!([
   {name: "outdoor equipment"},
   {name: "healthy food"}
 ])
-CategoryProduct.create!([
-  {product_id: 1, category_id: 5},
-  {product_id: 1, category_id: 3},
-  {product_id: 2, category_id: 1},
-  {product_id: 2, category_id: 6},
-  {product_id: 4, category_id: 4},
-  {product_id: 4, category_id: 3},
-  {product_id: 8, category_id: 1},
-  {product_id: 8, category_id: 6},
-  {product_id: 10, category_id: 1},
-  {product_id: 10, category_id: 2},
-  {product_id: 11, category_id: 1},
-  {product_id: 11, category_id: 2},
-  {product_id: 12, category_id: 3},
-  {product_id: 12, category_id: 4},
-  {product_id: 13, category_id: 3},
-  {product_id: 13, category_id: 4},
-  {product_id: 14, category_id: 3},
-  {product_id: 14, category_id: 4},
-  {product_id: 15, category_id: 3},
-  {product_id: 15, category_id: 5}
-])
+Image.delete_all
 Image.create!([
   {url: "http://www.bikesdirect.com/products/dawes/images/lt-sport-red-xiv-2100.jpg", product_id: 1},
   {url: "http://dreamatico.com/data_images/bike/bike-3.jpg", product_id: 1},
@@ -54,6 +34,8 @@ Image.create!([
   {url: "http://geekongadgets.com/wp-content/uploads/2016/09/Drone.jpg", product_id: 18}
 ])
 
+Product.delete_all
+
 Product.create!([
   {name: "xbox", price: "300.99", description: "gaming hype!!", supplier_id: 2},
   {name: "Starbucks Coffee", price: "7.99", description: "freshly brewed", supplier_id: 2},
@@ -69,10 +51,12 @@ Product.create!([
   {name: "drone", price: "400.0", description: "spy on your neighbors!", supplier_id: 1},
   {name: "Bananas", price: "10.0", description: "very ripe and tasty bananas", supplier_id: 1}
 ])
+Supplier.delete_all
 Supplier.create!([
   {name: "Target", email: "target@gmail.com", phone: "847-090-2323"},
   {name: "Walmart", email: "walmart@gmail.com", phone: "847-443-2323"}
 ])
+User.delete_all
 User.create!([
   {name: "sammy", email: "sammy@gmail.com", password_digest: "$2a$10$YWaJ58wrrlw//0/dsFt1AuPlN/s7/3wQlfRzIen3Rb/lOZ5D1yVkO", admin: false},
   {name: "obama", email: "obama@gmail.com", password_digest: "$2a$10$Snpx50nFUnjl6JB5.TMm6OX2mR74JD5aMfWIU31uqLHAZyNXImIza", admin: false},
