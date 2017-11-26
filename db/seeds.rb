@@ -54,19 +54,19 @@ Image.create!([
   {url: "http://geekongadgets.com/wp-content/uploads/2016/09/Drone.jpg", product_id: 18}
 ])
 Product.create!([
-  {name: "xbox", price: 300, description: "gaming hype!!", supplier_id: 2},
-  {name: "Starbucks Coffee", price: 7, description: "freshly brewed", supplier_id: 2},
-  {name: "Bike", price: 210, description: "a really sleek and fast bike, you will love it! They are available in red, green, black, blue, gray, purple, orange, yellow, white, and tie dye", supplier_id: 1},
-  {name: "skyrim", price: 60, description: "rpg game", supplier_id: 1},
-  {name: "mug", price: 5, description: "for coffee or tea", supplier_id: 1},
-  {name: "oblivion", price: 40, description: "elder scrolls game from 2006", supplier_id: 2},
-  {name: "tennis racket", price: 100, description: "very accurate, light weight", supplier_id: 1},
-  {name: "lays potato chips", price: 4, description: "crunchy", supplier_id: 1},
-  {name: "teddy bear", price: 22, description: "cute and cuddly", supplier_id: 2},
-  {name: "o'douls", price: 12, description: "non-alcoholic beer", supplier_id: 2},
-  {name: "Big Mac", price: 6, description: "very healthy, not", supplier_id: 2},
-  {name: "drone", price: 400, description: "spy on your neighbors!", supplier_id: 1},
-  {name: "Bananas", price: 10, description: "very ripe and tasty bananas", supplier_id: 1}
+  {name: "xbox", description: "gaming hype!!", supplier_id: 2},
+  {name: "Starbucks Coffee", description: "freshly brewed", supplier_id: 2},
+  {name: "Bike", description: "a really sleek and fast bike, you will love it! They are available in red, green, black, blue, gray, purple, orange, yellow, white, and tie dye", supplier_id: 1},
+  {name: "skyrim", description: "rpg game", supplier_id: 1},
+  {name: "mug", description: "for coffee or tea", supplier_id: 1},
+  {name: "oblivion", description: "elder scrolls game from 2006", supplier_id: 2},
+  {name: "tennis racket", description: "very accurate, light weight", supplier_id: 1},
+  {name: "lays potato chips", description: "crunchy", supplier_id: 1},
+  {name: "teddy bear", description: "cute and cuddly", supplier_id: 2},
+  {name: "o'douls", description: "non-alcoholic beer", supplier_id: 2},
+  {name: "Big Mac", description: "very healthy, not", supplier_id: 2},
+  {name: "drone", description: "spy on your neighbors!", supplier_id: 1},
+  {name: "Bananas", description: "very ripe and tasty bananas", supplier_id: 1}
 ])
 Supplier.create!([
   {name: "Target", email: "target@gmail.com", phone: "847-090-2323"},
