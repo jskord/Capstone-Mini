@@ -53,28 +53,20 @@ Image.create!([
   {url: "https://www.gianteagle.com/ProductImages/PRODUCT_NODE_406/18200007842.jpg", product_id: 17},
   {url: "http://geekongadgets.com/wp-content/uploads/2016/09/Drone.jpg", product_id: 18}
 ])
-Order.create!([
-  {user_id: 5, subtotal: "216.98", tax: "32.25", total: "247.25"},
-  {user_id: 5, subtotal: "70.89", tax: "10.5", total: "80.5"},
-  {user_id: 5, subtotal: "0.0", tax: "0.0", total: "0.0"},
-  {user_id: 5, subtotal: "321.88", tax: "48.0", total: "368.0"},
-  {user_id: 5, subtotal: "210.99", tax: "31.5", total: "241.5"},
-  {user_id: 5, subtotal: "270.99", tax: "40.5", total: "310.5"}
-])
 Product.create!([
-  {name: "xbox", price: "300.99".to_f, description: "gaming hype!!", supplier_id: 2},
-  {name: "Starbucks Coffee", price: "7.99".to_f, description: "freshly brewed", supplier_id: 2},
-  {name: "Bike", price: "210.99".to_f, description: "a really sleek and fast bike, you will love it! They are available in red, green, black, blue, gray, purple, orange, yellow, white, and tie dye", supplier_id: 1},
-  {name: "skyrim", price: "60.0".to_f, description: "rpg game", supplier_id: 1},
-  {name: "mug", price: "5.0".to_f, description: "for coffee or tea", supplier_id: 1},
-  {name: "oblivion", price: "40.0".to_f, description: "elder scrolls game from 2006", supplier_id: 2},
-  {name: "tennis racket", price: "100.0".to_f, description: "very accurate, light weight", supplier_id: 1},
-  {name: "lays potato chips", price: "4.99".to_f, description: "crunchy", supplier_id: 1},
-  {name: "teddy bear", price: "22.0".to_f, description: "cute and cuddly", supplier_id: 2},
-  {name: "o'douls", price: "12.0".to_f, description: "non-alcoholic beer", supplier_id: 2},
-  {name: "Big Mac", price: "6.99".to_f, description: "very healthy, not", supplier_id: 2},
-  {name: "drone", price: "400.0".to_f, description: "spy on your neighbors!", supplier_id: 1},
-  {name: "Bananas", price: "10.0".to_f, description: "very ripe and tasty bananas", supplier_id: 1}
+  {name: "xbox", price: 300, description: "gaming hype!!", supplier_id: 2},
+  {name: "Starbucks Coffee", price: 7, description: "freshly brewed", supplier_id: 2},
+  {name: "Bike", price: 210, description: "a really sleek and fast bike, you will love it! They are available in red, green, black, blue, gray, purple, orange, yellow, white, and tie dye", supplier_id: 1},
+  {name: "skyrim", price: 60, description: "rpg game", supplier_id: 1},
+  {name: "mug", price: 5, description: "for coffee or tea", supplier_id: 1},
+  {name: "oblivion", price: 40, description: "elder scrolls game from 2006", supplier_id: 2},
+  {name: "tennis racket", price: 100, description: "very accurate, light weight", supplier_id: 1},
+  {name: "lays potato chips", price: 4, description: "crunchy", supplier_id: 1},
+  {name: "teddy bear", price: 22, description: "cute and cuddly", supplier_id: 2},
+  {name: "o'douls", price: 12, description: "non-alcoholic beer", supplier_id: 2},
+  {name: "Big Mac", price: 6, description: "very healthy, not", supplier_id: 2},
+  {name: "drone", price: 400, description: "spy on your neighbors!", supplier_id: 1},
+  {name: "Bananas", price: 10, description: "very ripe and tasty bananas", supplier_id: 1}
 ])
 Supplier.create!([
   {name: "Target", email: "target@gmail.com", phone: "847-090-2323"},
